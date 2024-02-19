@@ -73,11 +73,10 @@ class hand(object):
 				cv2.imwrite('/home/Vandi/Downloads/Hand_Gesture_Recognition-master/img/Uncompressed_5.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 100])
 				cv2.imwrite('/home/Vandi/Downloads/Hand_Gesture_Recognition-master/img/Compressed_5.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 50])				
 		cv2.imshow('img',thresh1)
-		cv2.imshow('img1',img)
 		cv2.imshow('img2',img2)
 
 		k = cv2.waitKey(30) & 0xff
-		#if k == 27:
-		#	break
+		if k == 27:
+			break
 	cap.release()
 	cv2.destroyAllWindows()
