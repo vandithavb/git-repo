@@ -6,7 +6,7 @@ import math
 #class
 class hand(object):
 	#LOADING HAND CASCADE
-	hand_cascade = cv2.CascadeClassifier('hand_haar_cascade.xml')
+	hand_cascade = cv2.CascadeClassifier('C:\\Users\\Vandi\\gitcode\\git-repo\\Hand Gesture Recognition\\hand_haar_cascade.xml')
 
     # VIDEO CAPTURE
 	cap = cv2.VideoCapture(0)
@@ -73,6 +73,7 @@ class hand(object):
 				cv2.imwrite('/home/Vandi/Downloads/Hand_Gesture_Recognition-master/img/Uncompressed_5.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 100])
 				cv2.imwrite('/home/Vandi/Downloads/Hand_Gesture_Recognition-master/img/Compressed_5.jpg', img, [cv2.IMWRITE_JPEG_QUALITY, 50])				
 		cv2.imshow('img',thresh1)
+		cv2.imshow('img1',img)
 		cv2.imshow('img2',img2)
 
 		k = cv2.waitKey(30) & 0xff
